@@ -28,13 +28,13 @@ public class DespositTransaction extends Transaction{
         if (Success()) {
             System.out.println("Giao dịch nạp tiền thành công.");
             System.out.println(_timeStamp); // in ra thoi gian giao dich
-            System.out.println(Amount() + " VND đã được nạp vào tài khoản " + Account().Name());
+            System.out.println(Amount() + " VND đã được nạp vào tài khoản " + Account().getName());
         } else System.out.println("Giao dịch nạp tiền thất bại.");
     }
 
     public void Execute() throws Exception { //dung de thuc hien giao dich
         super.Execute();
-        _success = Account().Deposit(Amount());
+        _success = Account().Desposit(Amount());
     }
 
     public void Rollback() throws Exception { //dung de huy giao dich

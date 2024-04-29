@@ -3,7 +3,7 @@ package Controller;
 import java.sql.Timestamp; // timestamp dung de xac dinh thoi gian giao dich
 import java.util.Date; // dung de lay thoi gian hien tai
 
-public class Transaction {
+public abstract class Transaction {
     protected double _amount; //protected: chi co the truy cap tu class con
     protected boolean _success, _executed, _reversed; // bien boolean dung de kiem tra giao dich co thanh cong hay khong, da thuc hien hay chua, da bi huy hay chua
     protected Date _dateStamp; //dung de lay thoi gian hien tai
